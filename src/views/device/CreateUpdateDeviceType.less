@@ -1,0 +1,262 @@
+
+.device-type-modal{
+  .modal-body{
+    .ivu-steps {
+      width: 500px;
+      margin: auto;
+    }
+    
+    .se-form{
+       @_ele_width:700px;
+       @w_1:25%;
+       @w_2:9%;
+       @w_3:22%;
+       @w_4:12%;
+       @w_5:17%;
+       @w_6:15%;
+       @nw_1:25;
+       @nw_2:19;
+       @nw_3:22;
+       @nw_4:12;
+       @nw_5:17;
+       @nw_6:15;
+        width: @_ele_width;
+        margin: auto;
+        .create-header{
+          width: @_ele_width;
+          height: 35px;
+          display: flex;
+          flex-direction: row;
+          border-bottom: 1px solid rgba(68, 170, 246, 1);
+          div{
+            line-height: 35px;
+          }
+          .ivu-btn{
+            border-color:rgba(68, 170, 246, 1);
+            color:rgba(68, 170, 246, 1);
+            font-size: 14px;
+            padding: 2px 15px 6px;
+          }
+          &>:nth-child(1){
+            width: @w_1;
+            text-align: left;
+          }
+          &>:nth-child(2){
+            width: @w_2;
+            text-align: center;
+          }
+          &>:nth-child(3){
+            width: @w_3;
+            text-align: left;
+            color:rgba(15,36,59,1);
+            font-size:14px;
+          }
+          &>:nth-child(4){
+            width: @w_4;
+            text-align: center;
+            color:rgba(15,36,59,1);
+            font-size:14px;
+          }
+          &>:nth-child(5){
+            width: @w_5;
+            text-align: center;
+            color:rgba(15,36,59,1);
+            font-size:14px;
+            font-weight:400;
+          }
+          &>:nth-child(6){
+            width: @w_6;
+            text-align: center;
+            color:rgba(15,36,59,1);
+            font-size:14px;
+            font-weight:400;
+          }
+          .ivu-upload-list{
+            display: none;
+          }
+          
+        }
+        .create-container{
+          width: @_ele_width;
+          display: flex;
+          flex-direction: row;
+          .json-editor-parent{
+            height: 100%;
+            max-height: 305px;
+            width: @w_1;
+           
+            .json-editor{
+              height: 100%;
+              background: #F3F6F9;
+              border: 1px solid rgba(110, 136, 179, 0.3);
+              margin: 10px 0px 10px 0px;
+              .jsoneditor {
+                border: none;
+              }
+              div.jsoneditor-outer
+              {
+                margin: 0 0 0 0;
+                padding: 0 0 0 0;
+                
+              }
+              .jsoneditor-menu{
+                display: none;
+              }
+              .ace_editor.ace-jsoneditor{
+                font-size: 12px !important;
+              }
+              .ace-jsoneditor .ace_scroller{
+                left:0px !important;
+                background-color:#F3F6F9;
+              }
+              .ace-jsoneditor .ace_gutter{
+                display: none;
+              }
+            }
+          }
+          &>:nth-child(2){
+            width: @w_2;
+            text-align: center;
+            margin: 10px 0px 10px 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .process-btn{
+              width: 27px;
+              height: 40px;
+              border-radius: 3px;
+              margin: auto;
+             
+              background-color:#999;
+              &.active{
+                background-color: rgba(68, 170, 246, 1);
+                cursor: pointer;
+              }
+              i{
+                color: white;
+                line-height: 40px;
+  
+              }
+            }
+          }
+          &>:nth-child(3){
+            width: calc(100% - @w_1 - @w_2);
+            margin: 10px 0px 10px 0px;
+            max-height: 305px;
+            overflow: auto;
+            .data-item{
+              height: 40px;
+              display: flex;
+              flex-direction: row;
+              
+              &>:nth-child(1){
+                width: calc(@w_3 * 100 / (@nw_3 + @nw_4 + @nw_5+ @nw_6));
+                text-align: left;
+                color:rgba(92, 107, 142, 1);
+                font-size: 14px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                
+              }
+              &>:nth-child(2){
+                width: calc(@w_4 * 100 / (@nw_3 + @nw_4 + @nw_5+ @nw_6));
+                text-align: center;
+                
+              }
+              &>:nth-child(3){
+                width: calc(@w_5 * 100 / (@nw_3 + @nw_4 + @nw_5+ @nw_6));
+                text-align: center;
+                .ivu-input-wrapper{
+                  width: 90%;
+                  margin: auto;
+                  .ivu-input{
+                    font-size: 14px;
+                  }
+                }
+              }
+              &>:nth-child(4)
+              {
+                width: calc(@w_6 * 100 / (@nw_3 + @nw_4 + @nw_5+ @nw_6));
+                text-align: center;
+                .ivu-select{
+                  width: 90%;
+                  margin: auto;
+                  
+                  .ivu-select-selected-value{
+                    font-size: 14px;
+                    font-family:Adobe Heiti Std R;
+                    font-weight:normal;
+                    color:rgba(92,107,142,1);
+                  }
+                }
+              }
+            }
+          }
+        }
+       .plugin-config{
+         height: 305px;
+         align-items:normal;
+         -webkit-user-select:none;
+         .ivu-divider{
+           margin: 0;
+           background-color: #D2DCEB;
+         }
+         .plugin-wrapper
+         {
+           display: flex;
+           flex-direction: row;
+           height: 100%;
+           width: 100%;
+           .tree-wrapper{
+             width:30%;
+             height: 100%;
+             border-right:1px solid #D2DCEB;
+             .my-tree-node{
+                font-size: 14px;
+                color:#5C6B8E;
+                &.parent{
+
+                }
+                &.child{
+                  cursor: pointer;
+                  &.active{
+                    color:#44AAF6;
+                  }
+
+                }
+             }
+           }
+           .option-wrapper{
+            width: 70%;
+            padding: 20px;
+            .basic-form{
+              .ivu-form-item{
+                margin-bottom: 16px;
+              }
+            }
+            .none-show{
+              text-align: center;
+              height: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              i{
+                font-size: 60px;
+                color: #D2DCEB;
+              }
+              div{
+                color: #999;
+                font-size: 14px;
+              }
+            }
+           }
+         }
+       } 
+    }
+    .create-steps{
+      margin-bottom: 20px;
+    }
+  }
+}

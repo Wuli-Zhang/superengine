@@ -1,0 +1,141 @@
+.layout {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	.ivu-layout {
+		height: 100%;
+		background: #f3f6f9;
+		overflow: hidden;
+		.ivu-layout-sider {
+			background: linear-gradient(0deg,rgba(50,85,120,1),rgba(52,73,94,1));
+			.se-logo {
+				background: rgba(22,118,182,1);
+				text-align: center;
+				overflow: hidden;
+				height: 64px;
+				font-size: 20px;
+				color: #fff;
+				line-height: 64px;
+				img {
+					margin-right: 10px;
+					vertical-align: middle;
+				}
+			}
+			.ivu-menu-light {
+				background: inherit;
+				.ivu-menu-item {
+					padding-left: 50px;
+					color: #D2DCEB;
+					height: 50px;
+					overflow: hidden;
+					white-space: nowrap;
+					i {
+						font-size: 18px;
+						margin-right: 10px;
+						line-height: 20px;
+					}
+					&:hover,&.ivu-menu-item-active {
+						color: #69BFFF;
+						background-color: rgba(2,47,81,0.3);
+					}
+				}
+			}
+			.se-meau-col {
+				z-index: 99;
+				position: absolute;
+				right: -15px;
+				width: 30px;
+				top: 15px;
+				height: 34px;
+				margin: none;
+				cursor: pointer;
+			}
+			&.ivu-layout-sider-collapsed {
+				.ivu-menu-item {
+					padding-left: 0!important;
+					padding-right: 0!important;
+					text-align: center;
+				}
+				span {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.layout-header-bar {
+	background: #fff;
+	position: relative;
+	box-shadow:0px 3px 7px 0px rgba(110,136,179,0.3);
+	.nav-bre {
+		width: auto;
+		overflow: hidden;
+		line-height: 64px;
+		display: inline-block;
+		float: left;
+		margin: 0 30px;
+	}
+	.err-info {
+		margin-left: 50px;
+		font-size: 14px;
+		padding-left: 30px;
+		line-height: 32px;
+		width: 500px;
+		height: 32px;
+		margin-top: 17px;
+		background: rgba(243,246,249,1);
+		border-radius:16px;
+		float: left;
+		.iconfont {
+			font-size: 18px;
+		}
+	}
+}
+
+.layout-logo-left {
+	width: 90%;
+	height: 30px;
+	background: #5b6270;
+	border-radius: 3px;
+	margin: 15px auto;
+}
+
+.menu-icon {
+	transition: all .3s;
+}
+
+.rotate-icon {
+	transform: rotate(-90deg);
+}
+
+.menu-item span {
+	display: inline-block;
+	overflow: hidden;
+	width: 69px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: bottom;
+	transition: width .2s ease .2s;
+	font-size: 16px;
+	line-height: 16px;
+}
+
+.menu-item i {
+	transform: translateX(0px);
+	transition: font-size .2s ease, transform .2s ease;
+	vertical-align: middle;
+	font-size: 16px;
+}
+
+.collapsed-menu span {
+	width: 0px;
+	transition: width .2s ease;
+}
+
+.collapsed-menu i {
+	transform: translateX(5px);
+	transition: font-size .2s ease .2s, transform .2s ease .2s;
+	vertical-align: middle;
+	font-size: 22px;
+}

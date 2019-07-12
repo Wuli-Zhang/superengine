@@ -1,0 +1,202 @@
+
+.regist-parent{
+	position: absolute;
+	right: calc(~"30% - 193px");
+	width: 395px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	height: 100%;
+	
+	.regist-wrapper{
+		-webkit-user-select:none;
+		// text-align: center;	
+		.header{
+			width: 100%;
+			height: 50px;
+			line-height: 50px;
+			border: none;
+			font-size: 18px;
+			border-radius: 6px 6px 0 0;
+			box-shadow:0px 14px 27px 1px rgba(0, 0, 0, 0.38);
+			text-align: center;
+			margin-right: 4%;
+			color: #00FFFC;
+			background-color: #0D4164;
+		}
+		.se-form{
+			padding: 20px;
+			background: rgba(5, 22, 44, 0.7);
+			.regist-form-item{
+				// max-width: 380px;
+				.ivu-form-item-label{
+					width: 80px !important;
+					padding: 13px 12px 12px 0;
+					color: wheat;
+					text-align: right;
+					font-size: 14px;
+				}
+				.ivu-form-item-content{
+					margin-left: 80px  !important;
+				}
+		
+			}
+			.ivu-form-item {
+				margin-bottom: 15px;
+				input.ivu-input {
+					font-size: 12px;
+					border-radius: 0;
+					height: 40px;
+					padding-left: 52px;
+					color: #fff;
+					background-color: rgba(243,247,251,0.3);
+					border: none;
+				}
+				.ivu-select {
+					.ivu-select-selection {
+						height: 40px;
+						border-radius: 0;
+						border: none;
+						span {
+							height: 40px;
+							line-height: 40px;
+						}
+					}
+				}
+			}
+			.ivu-tabs-tabpane {
+				width: calc(~"100% - 60px");
+				height: calc(~"100% - 40px");
+				margin: 20px 30px;
+			}
+			.ivu-input-prefix {
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				background-color: #404B54;
+				i {
+					font-size: 20px;
+					color: #fff;
+				}
+			}
+			.ivu-checkbox-wrapper {
+				font-size: .87rem;
+			}
+			.code-input {
+				width: 220px;
+			}
+			.code-img {
+				width: 96px;
+				height: 40px;
+				float: right;
+				cursor: pointer;
+				font-size: 12px;
+				border: 1px solid rgba(243, 247, 251, 0.3);
+			}
+			.ivu-select-selection{
+				background-color:rgba(243,247,251,0.3);
+			}
+			.ivu-select-selected-value{
+				color: white;
+				font-size: 12px !important;
+			}
+			.ivu-select-arrow{
+				color: white;
+			}
+			.ivu-select-selection-focused .ivu-select-selection
+			{
+				border-color:#404B54; 
+			}
+			.ivu-select-selection-focused, .ivu-select-selection:hover{
+				border-color:#dcdee2
+			}
+			.ivu-radio-wrapper{
+				color: white;
+				font-size: 17px;
+			}
+			.ivu-checkbox-wrapper{
+				color: white;
+				margin-left: 80px;
+			}
+			.ivu-form-item-error-tip{
+				padding-top:2px;
+			}
+			button {
+				font-size: 1rem;
+				border: none;
+				border-radius: 0;
+				
+				&.login-btn {
+					width:79px;
+					height:40px;
+					background:rgba(13,65,100,1);
+					color: #fff;
+					margin-right: 10px;
+					margin-left: 80px;
+				}
+				&.regist-btn {
+					width:184px;
+					height:40px;
+					background:rgba(104,247,245,1);
+					color: #071D33;
+				}
+			}
+		}
+	}
+	.ivu-checkbox-wrapper{
+		.ivu-checkbox-checked 
+		{
+			.ivu-checkbox-inner{
+				border-color: #404B54 !important;
+				background-color: #404B54 !important;
+			}
+			
+		}
+	}
+	.ivu-radio-inner:after{
+		background-color: #404B54;
+	}
+	.ivu-radio-checked:hover .ivu-radio-inner
+	{
+		border-color:#404B54
+	}
+	.ivu-radio:hover .ivu-radio-inner
+	{
+		border-color:#404B54
+	}
+	.ivu-radio-checked .ivu-radio-inner
+	{
+		border-color:#404B54
+	}
+}
+
+.Agreement{
+	max-height: 600px;
+	overflow: auto;
+}
+
+// @media screen and (max-width: 1600px) {
+//     .regist-parent{
+// 		position: absolute;
+// 		right: calc(~"30% - 233px");
+// 		width: 326px;
+// 		button {
+// 			font-size: 1rem;
+// 			border: none;
+// 			border-radius: 0;
+// 			&.reset-btn {
+// 				width:73px;
+// 				height:40px;
+// 				background:rgba(13,65,100,1);
+// 				color: #fff;
+// 				margin-right: 10px;
+// 			}
+// 			&.login-btn {
+// 				width:163px;
+// 				height:40px;
+// 				background:rgba(104,247,245,1);
+// 				color: #071D33;
+// 			}
+// 		}
+// 	}
+// }

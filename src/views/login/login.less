@@ -1,0 +1,225 @@
+.login{
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/images/login_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+	font-family: 'SourceHanSansCN-Regular';
+	font-weight: Regular;
+	font-size: 16px;
+	text-align: left;
+	.title {
+		position: absolute;
+		right: calc(~"65% - 330px");
+		max-width: 755px;
+		top: calc(~"45% - 25px");
+		color: #fff;
+		font-size: 48px;
+		font-weight: 400;
+		letter-spacing: 4px;
+	}
+	.depiction {
+		position: absolute;
+		right: calc(~"65% - 330px");
+		width: 470px;
+		top: calc(~"60% - 55px");
+		color: #9ED5E8;
+		font-size: 26px;
+		font-weight: 400;
+	}
+    &-con{
+        position: absolute;
+        right: calc(~"30% - 193px");
+        top: calc(~"50% - 200px");
+        width: 386px;
+		// height: 400px;
+		overflow: hidden;
+		border-radius: 6px;
+		.ivu-tabs-bar {
+			margin-bottom: 0;
+			height: 50px;
+			border: none;
+			.ivu-tabs-nav-container {
+				height: 50px!important;
+			}
+			.ivu-tabs-nav {
+				width: 100%;
+				.ivu-tabs-tab {
+					width: 100%;
+					height: 50px;
+					line-height: 40px;
+					border: none;
+					font-size: 1.125rem;
+					border-radius: 6px 6px 0 0;
+					box-shadow:0px 14px 27px 1px rgba(0, 0, 0, 0.38);
+					text-align: center;
+					margin-right: 4%;
+					color: #C1D0DA;
+					background-color: #0D4164;
+					&.ivu-tabs-tab-active {
+						// background-color: rgba(5,22,44,0.7);
+						color: #00FFFC;
+					}
+					&:last-child {
+						margin: 0;
+					}
+				}
+			}
+		}
+		.ivu-tabs-content {
+			color: #fff;
+			// background:rgba(5,22,44,0.7);
+			.ivu-form-item {
+				margin-bottom: 20px;
+				input.ivu-input {
+					font-size: 12px;
+					border-radius: 0;
+					height: 40px;
+					padding-left: 52px;
+					color: #fff;
+					background-color: rgba(243,247,251,0.3);
+					border: none;
+				}
+			}
+			.ivu-tabs-tabpane {
+				width: calc(100%);
+				height: calc(100%);
+				padding: 20px 30px;
+    			background-color: rgba(5, 22, 44, 0.7);
+			}
+			.ivu-input-prefix {
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				background-color: #404B54;
+				i {
+					font-size: 20px;
+					color: #fff;
+				}
+			}
+			.ivu-checkbox-wrapper {
+				font-size: .87rem;
+			}
+			.code-input {
+				width: 220px;
+			}
+			.code-img {
+				width: 96px;
+				height: 40px;
+				float: right;
+				cursor: pointer;
+				font-size: 12px;
+				border: 1px solid rgba(243, 247, 251, 0.3);
+			}
+			button {
+				font-size: 1rem;
+				border: none;
+				border-radius: 0;
+				&.regist-btn {
+					width:93px;
+					height:40px;
+					background:rgba(13,65,100,1);
+					color: #fff;
+					margin-right: 10px;
+				}
+				&.login-btn {
+					width:223px;
+					height:40px;
+					background:rgba(104,247,245,1);
+					color: #071D33;
+				}
+			}
+		}
+        &-header{
+            font-size: 16px;
+            font-weight: 300;
+            text-align: center;
+            padding: 30px 0;
+        }
+        .form-con{
+            padding: 10px 0 0;
+        }
+        .login-tip{
+            font-size: 10px;
+            text-align: center;
+            color: #c3c3c3;
+        }
+    }
+}
+.ivu-checkbox-wrapper{
+	.ivu-checkbox-checked 
+	{
+		.ivu-checkbox-inner{
+			border-color: #404B54 !important;
+			background-color: #404B54 !important;
+		}
+		
+	}
+}
+@media screen and (max-width: 1600px) {
+    .login{
+    	.title {
+    		position: absolute;
+    		right: calc(~"65% - 260px");
+    		max-width: 755px;
+    		top: calc(~"45% - 25px");
+    		color: #fff;
+    		font-size: 38px;
+    		font-weight: 400;
+    		letter-spacing: 4px;
+    	}
+    	.depiction {
+    		position: absolute;
+    		right: calc(~"65% - 370px");
+    		width: 470px;
+    		top: calc(~"60% - 25px");
+    		color: #9ED5E8;
+    		font-size: 20px;
+    		font-weight: 400;
+		}
+		
+        &-con{
+            position: absolute;
+            right: calc(~"30% - 233px");
+            top: calc(~"50% - 200px");
+            width: 326px;
+    		height: 400px;
+			.ivu-tabs-content {
+				.ivu-form-item {
+					margin-bottom: 18px;
+				}
+				.code-input {
+					width: 190px;
+				}
+				.code-img {
+					width: 66px;
+					height: 40px;
+					float: right;
+					cursor: pointer;
+					font-size: 12px;
+					border: 1px solid rgba(243, 247, 251, 0.3);
+				}
+				
+				button {
+					font-size: 1rem;
+					border: none;
+					border-radius: 0;
+					&.reset-btn {
+						width:73px;
+						height:40px;
+						background:rgba(13,65,100,1);
+						color: #fff;
+						margin-right: 10px;
+					}
+					&.login-btn {
+						width:163px;
+						height:40px;
+						background:rgba(104,247,245,1);
+						color: #071D33;
+					}
+				}
+			}
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.user{
+  &-avatar-dropdown{
+    cursor: pointer;
+    // display: inline-block;
+    // height: 64px;
+    // line-height: 64px;
+		position: absolute;
+		z-index: 99;
+		right: 30px;
+		line-height: 35px;
+		height: 35px;
+		top: 10px;
+		span.user-name {
+			vertical-align: top;
+			margin-right: 10px;
+			max-width: 150px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+    .ivu-badge-dot{
+      top: 16px;
+    }
+		i {
+			font-size: 28px;
+			vertical-align: unset;
+			color: rgb(68,170,246);
+		}
+  }
+}

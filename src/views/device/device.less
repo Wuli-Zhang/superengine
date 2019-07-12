@@ -1,0 +1,147 @@
+.add-btn {
+	float: right;
+	width: 120px;
+	// height: 40px;
+	background: #44AAF6;
+	color: #fff;
+}
+.add-group {
+	color: #44AAF6;
+	border: 1px solid rgba(68,170,246,.5);
+	&:hover {
+		border: 1px solid rgba(68,170,246,1);
+	}
+}
+
+.device-type {
+	font-size: 20px;
+	color:rgba(15,36,59,1);
+	margin-top: 10px;
+	font-weight: 500;
+	.device-name {
+		&>i {
+			vertical-align: top;
+			line-height: 30px;
+			display: inline-block;
+			margin-left: 10px;
+			font-size: 12px;
+			color: rgb(206, 161, 23);
+			font-weight: bold;
+		}
+	}
+	.ivu-poptip {
+		vertical-align: top;
+		i {
+			font-size: 14px;
+			color: #5FAFE4;
+		}
+	}
+	.ivu-divider {
+		margin: 15px 0 5px 0;
+	}
+}
+
+.device-list {
+	padding: 10px 20px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+	height: 125px;
+	&:hover {
+		padding: 4px!important;
+		&>div {
+			padding-top: 26px;
+			padding-bottom: 16px;
+			padding-left: 18px;
+			padding-right: 28px;
+			box-shadow: 0px 0px 9px 5px rgba(73,129,222,0.2);
+		}
+// 		animation:mymove 200ms infinite;
+// 		animation-iteration-count: 1;
+// 		@keyframes mymove
+// 		{
+// 			from {padding:12px;}
+// 			to {padding:4px;}
+// 		}
+	}
+	.ivu-divider {
+		margin: 10px 0;
+	}
+	&>div {
+		background: #fff;
+		box-shadow: 0px 0px 9px 2px rgba(110,136,179,0.3);
+		border-radius:10px;
+		padding: 15px 20px 15px 10px;
+	}
+	.device-name {
+		font-size: 18px;
+		color: #0F243B;
+		span {
+			width: calc(~"100% - 30px");
+			overflow: hidden;
+			padding: 0 10px;
+			display: inline-block;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
+	.device-attr {
+		text-align: center;
+		line-height: 20px;
+		p {
+			color: #7E8CAF;
+			font-size: 14px;
+		}
+		span {
+			font-size:14px;
+			font-family:ArialMT;
+			color: #0F243B;
+			&.num {
+				color: #44AAF6;
+			}
+		}
+	}
+}
+
+.ivu-steps {
+	width: 500px;
+	margin: auto;
+}
+	
+.modal-row {
+	padding-top: 20px;
+	color: #5C6B8E;
+	input.ivu-input {
+		height: 40px;
+	}
+	.position-info {
+		margin-bottom: 20px;
+		span {
+			color:rgba(126,140,175,1);
+			font-size: 14px;
+		}
+		i {
+			font-weight: 600;
+			font-size: 18px;
+			color: #FF8830;
+			margin-right: 10px;
+			vertical-align: top;
+		}
+	}
+	.ivu-radio-group {
+		.ivu-radio-wrapper {
+			margin-bottom: 20px;
+			span {
+				&:last-child {
+					font-size: 16px;
+					color: #0F243B;
+				}
+			}
+		}
+		p {
+			font-size:12px;
+			color:rgba(126,140,175,0.6);
+			margin-right: 60px;
+		}
+	}
+}
+

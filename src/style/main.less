@@ -1,0 +1,207 @@
+@import url("./device/device.less");
+
+html,body,#app {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	overflow: hidden;
+	font-family: 'SourceHanSansCN-Regular';
+}
+
+.click {
+	cursor: pointer;
+}
+
+.hide-input {//隐藏边框的Input
+	input {
+		border: none;
+		&:focus {
+			box-shadow: none;
+		}
+	}
+}
+
+.ivu-table {
+	font-size: 14px;
+	th {
+		background-color: #1676B6;
+		color: #fff;
+		border: none;
+		font-weight: 400;
+		height: 40px;
+	}
+	td {
+		height: 40px;
+		span {
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+}
+
+//标签
+.ivu-tag {
+	height: 32px;
+	line-height: 30px;
+}
+
+//操作按钮蓝色
+.handle {
+		color: #44AAF6;
+		.ivu-switch-checked {
+			border-color: #1FE397;
+			background-color: #1FE397;
+		}
+	}
+
+.ivu-collapse>.ivu-collapse-item>.ivu-collapse-header {
+	height: auto;
+}
+
+.ivu-collapse {
+	border: none;
+}
+
+.ivu-divider-horizontal {
+	margin: 15px 0 5px 0;
+}
+
+.ivu-modal-content {
+	.ivu-modal-header {
+		background: rgba(243,246,249,1);
+		border-radius: 6px 6px 0 0;
+		p {
+			color: #0F243B;
+			font-weight: 400;
+			font-size: 18px;
+		}
+	}
+	.modal-body {
+		padding: 20px 20px 0 20px;
+	}
+	.modal-foot {
+		margin-top: 15px;
+	}
+	.ivu-modal-footer {
+		// display: none;
+	}
+}
+
+.ivu-form-item {
+	font-size: 14px;
+	label.ivu-form-item-label {
+		font-size: 14px;
+	}
+	.ivu-select-single .ivu-select-selection .ivu-select-placeholder, 
+	.ivu-select-single .ivu-select-selection .ivu-select-selected-value {
+		font-size: 14px;
+	}
+	.ivu-select {
+		.ivu-select-selection {
+			span {
+				font-size: 14px;
+			}
+		}
+	}
+}
+.se-form {
+	.ivu-form-item {
+		font-size: 14px;
+		label.ivu-form-item-label {
+// 			padding-top: 13px;
+// 			font-size: 14px;
+		}
+		.ivu-select-single .ivu-select-selection .ivu-select-placeholder, 
+		.ivu-select-single .ivu-select-selection .ivu-select-selected-value {
+			font-size: 14px;
+		}
+		.ivu-select {
+			.ivu-select-selection {
+				height: 35px;
+				span {
+					line-height: 35px;
+					font-size: 14px;
+				}
+			}
+		}
+		.ivu-input-wrapper {
+			i {
+				width: 32px;
+				height: 35px;
+				line-height: 35px;
+				font-size: 18px;
+			}
+			.ivu-input {
+				height: 35px;
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.ivu-steps .ivu-steps-main {
+	margin-left: -10px;
+}
+
+.ivu-steps-horizontal .ivu-steps-content {
+	line-height: 28px;
+	background: #fff;
+	display: table-cell;
+	padding-left: 0;
+}
+
+//添加设备类型中选择设备位置信息的radio变大
+.device-type-modal,.save-setting-modal {
+	.ivu-radio-wrapper {
+		.ivu-radio-inner {
+			width: 22px;
+			height: 22px;
+			&:after {
+				width: 16px;
+				height: 16px;
+				border-radius: 14px;
+			}
+		}
+	}
+}
+
+.ivu-breadcrumb {
+	.ivu-breadcrumb-item-link {
+		.click {
+			display: inline-block;
+			color: #7E8CAF;
+			&.active {
+				color: #44AAF6;
+				// height: 40px;
+				border-bottom: 2px solid #44AAF6;
+			}
+		}
+	}
+}
+// .modal-foot {
+// 	.se-btn {
+// 		// height: 40px;
+// 		width: 76px;
+// 	}
+// }
+
+
+// 
+.se-btn {
+	// height: 40px;
+	font-size: 14px;
+	height: 35px;
+	padding: 0 15px;
+	text-align: center;
+	line-height: 30px;
+	// margin-top: 2px;
+	vertical-align: middle;
+}
+
+.ivu-form-item {
+	input {
+		height: 35px;
+	}
+}
