@@ -51,14 +51,14 @@
                         <Col span=12>
                         <template v-for='(details_device_item ,key) in formItem.device_arr1'>
                             <FormItem :label="key">
-                                <Input v-model="formItem.device_arr1[key]"></Input>
+                                <Input v-model="formItem.device_arr1[key].data" @on-change='change(formItem.device_arr1[key])'></Input>
                             </FormItem>
                         </template>
                         </Col>
                         <Col span='12'>
                         <template v-for='(details_device_item ,key) in formItem.device_arr2'>
                             <FormItem :label="key">
-                                <Input v-model="formItem.device_arr2[key]"></Input>
+                                <Input v-model="formItem.device_arr2[key].data" @on-change='change(formItem.device_arr2[key])'></Input>
                             </FormItem>
                         </template>
                         </Col>
@@ -66,7 +66,7 @@
                 </Form>
             </vue-scroll>
             <Row>
-                <Button class="se-btn" :disabled="false" @click="incrementOk" type="primary" style="float: right;margin-left: 20px;">确定</Button>
+                <Button class="se-btn" :disabled="false" @click="incrementOk" type="primary" style="float: right;margin-left: 20px;">保存</Button>
                 <Button class="se-btn" @click="incrementCancel" style="float: right;" type="primary" ghost>取消</Button>
             </Row>
         </Modal>
@@ -102,17 +102,30 @@ export default {
                 this.formItem.code = data.row.code
                 this.formItem.lat = data.row.lat
                 this.formItem.lon = data.row.lon
-                this.device_id = data.row.data_id
+
                 this.devicecode = data.row.code.split("_")[1]
-                
+
                 const opt = {
                     url: `http://192.168.1.187:3000/api/sjc_dj?_where=(JH,eq,${this.devicecode})`,
                     method: 'get'
                 }
                 Fetch(opt, (respon) => {
                     let data = respon[0]
+                    this.device_id = data.data_id
                     Object.keys(data).forEach((item, index) => {
-                        index % 2 == 0 ? this.formItem.device_arr1[item] = data[item] : this.formItem.device_arr2[item] = data[item]
+                        if (index % 2 == 0) {
+                            this.formItem.device_arr1[item] = {
+                                data: data[item] || '',
+                                type: data[item] === null || '' ? 'string' : typeof data[item],
+                                ischanged: false
+                            }
+                        } else {
+                            this.formItem.device_arr2[item] = {
+                                data: data[item] || '',
+                                type: data[item] === null || '' ? 'string' : typeof data[item],
+                                ischanged: false
+                            }
+                        }
                     })
                     this.modalVisible = !this.modalVisible
                 })
@@ -120,14 +133,41 @@ export default {
             }
         },
         incrementOk() {
-            let postData = {
+            let device_list = {
                 ...this.formItem.device_arr1,
                 ...this.formItem.device_arr2
             }
-            this.modalVisible = !this.modalVisible
+            let postData={},i=0
+            for (let key in device_list) {
+                if (device_list[key].ischanged) {
+                    if (device_list[key].type == 'number') {
+                        postData[key] = Number(device_list[key].data)
+                    } else {
+                        postData[key] = device_list[key].data
+                    }
+                }else{
+                    i++
+                }
+            }
+            if(i!==Object.keys(device_list).length){
+
+                const opt = {
+                    url: `http://192.168.1.187:3000/api/sjc_dj/${this.device_id}`,
+                    method: 'PATCH',
+                    data: postData
+                }
+                Fetch(opt, (respon) => {
+                    this.$Message.success("更新成功!")
+                })
+            }
+                    this.modalVisible = !this.modalVisible
+
         },
         incrementCancel() {
             this.modalVisible = !this.modalVisible
+        },
+        change(key){
+            key.ischanged = true
         }
     }
 };

@@ -28,6 +28,8 @@ export const Fetch = (opt, fn) => {
 		})
 	}).then((res) => {
 		return res
+	}).catch(error => {
+		console.log(error)
 	})
 }
 
