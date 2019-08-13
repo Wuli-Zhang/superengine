@@ -1,0 +1,72 @@
+{
+	"userinfo":
+	{
+		"email": "12345678@qqq.com",
+		"name": "张三三",
+		"gender": "女",
+		"img": "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=400062461,2874561526&fm=26&gp=0.jpg"
+	},
+	"user_cut": [
+	{
+		"filename": "剪裁文件名1",
+		"cutdate": "2019/08/01 09:30:00"
+	},
+	{
+		"filename": "剪裁文件名2",
+		"cutdate": "2019/08/02 09:30:00"
+	},
+	{
+		"filename": "剪裁文件名3",
+		"cutdate": "2019/08/03 09:30:00"
+	},
+	{
+		"filename": "剪裁文件名4",
+		"cutdate": "2019/08/04 09:30:00"
+	},
+	{
+		"filename": "剪裁文件名5",
+		"cutdate": "2019/08/05 09:30:00"
+	},
+	{
+		"filename": "剪裁文件名6",
+		"cutdate": "2019/08/06 09:30:00"
+	},
+	{
+		"filename": "剪裁文件名7",
+		"cutdate": "2019/08/07 09:30:00"
+	},
+	{
+		"filename": "剪裁文件名8",
+		"cutdate": "2019/08/08 09:30:00"
+	},
+	{
+		"filename": "剪裁文件名9",
+		"cutdate": "2019/08/08 09:30:00"
+	},
+	{
+		"filename": "剪裁文件名10",
+		"cutdate": "2019/08/08 09:30:00"
+	}],
+	"main_list": [
+	{
+		"img": "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=400062461,2874561526&fm=26&gp=0.jpg",
+		"time": "2019/07/25",
+		"dis": "asjdnakjasdkjsandkaasdasnd",
+		"state": "100%areasize...",
+		"data": "11"
+	},
+	{
+		"img": "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=400062461,2874561526&fm=26&gp=0.jpg",
+		"time": "2019/07/25",
+		"dis": "asjdnakjasdkjsandkaasdasnd",
+		"state": "100%areasize...",
+		"data": "12"
+	},
+	{
+		"img": "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=400062461,2874561526&fm=26&gp=0.jpg",
+		"time": "2019/07/25",
+		"dis": "asjdnakjasdkjsandkaasdasnd",
+		"state": "100%areasize...",
+		"data": "13"
+	}]
+}
